@@ -16,14 +16,23 @@ body {
     justify-content:flex-end;
 }
 
+#bar a {
+    color:lightgray;
+    text-decoration:none;
+
+}
+
 #bar > ul > li {
-    margin:0 1rem;
+    margin:0 0.5rem;
+    padding:1rem 1.5rem;
     display:inline;
-    color:gray;
+    border-bottom:1px solid transparent;
+    -webkit-transition:all 0.2s ease;
+    transition:all 0.2s ease;
 }
 
 #bar > ul > li:hover {
-    border:1px solid lightgray;
+    border-bottom:1px solid lightgray;
 }
 
 header {
@@ -39,4 +48,68 @@ header {
 
 svg {
     font-family:"Courier Prime";
+}
+
+section {
+    padding:2rem;
+}
+
+section > .section_title {
+    font-size:2rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+section > .section_title:after {
+    content:"";
+    height:2px;
+    display:inline;
+    margin-left:2rem;
+    flex-grow:1;
+    background:#AACCEE;
+}
+
+section > .image_container {
+    margin:2rem;
+    display:flex;
+    justify-content:space-between;
+}
+
+section > .image_container > img {
+    width:100px;
+    height:100px;
+    background:linear-gradient(to bottom right, #AACCFF, #6688CC);
+    border:1px solid rgba(0, 0, 0, 0.4);
+    border-radius:0.25rem;
+}
+
+footer {
+    color:#CCC;
+    background:#222;
+    padding:4rem;
+    padding-bottom:8rem;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+footer > ul {
+    list-style-type:none;
+}
+
+footer > ul > li > a {
+    text-decoration:none;
+    color:#CCC;
+}
+
+footer > #footer_copy {
+    width:100%;
+    background:#111;
+    position:absolute;
+    padding:2rem;
+    bottom:0;
+    left:0;
+    text-align:center;
 }
